@@ -361,7 +361,7 @@ function param(obj, keepAll) {
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// == inline begin ==
+var a="helinjiang";// == inline begin ==
 // eval(require('raw-loader!../../modules/nightmare-preload.js'));
 // == inline end ==
 
