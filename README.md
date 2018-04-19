@@ -1,2 +1,2 @@
 # e2ex
-E2E tester
+E2E tester using nightmare
