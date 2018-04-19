@@ -1,0 +1,12 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "e2ex.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mytest": "node ../bin/e2ex build"
+  },
+  "author": "",
+  "license": "MIT"
+}
