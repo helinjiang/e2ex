@@ -57,6 +57,7 @@
     "happypack": "^4.0.1",
     "hexo-fs": "^0.2.3",
     "inquirer": "^3.0.6",
+    "jquery": "^3.3.1",
     "js-yaml": "^3.11.0",
     "matman-core": "^0.1.5",
     "meow": "^3.7.0",
