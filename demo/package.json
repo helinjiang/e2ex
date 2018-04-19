@@ -8,5 +8,9 @@
     "mytest": "node ../bin/e2ex build"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "url-handle": "^0.1.3"
+  }
 }
