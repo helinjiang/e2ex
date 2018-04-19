@@ -1,9 +1,10 @@
 {
   "name": "e2ex",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "E2E tester using nightmare",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "start": "node ./bin/e2ex",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +17,13 @@
     "nightmare"
   ],
   "author": "helinjiang",
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "license": "MIT",
+  "bin": {
+    "matman": "./bin/matman"
+  },
   "bugs": {
     "url": "https://github.com/helinjiang/e2ex/issues"
   },
