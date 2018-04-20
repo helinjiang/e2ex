@@ -1,4 +1,4 @@
-const app = require('./demo');
+const app = require('../demo');
 
 function getResult(opts) {
     // 如何校验，前端页面执行脚本
