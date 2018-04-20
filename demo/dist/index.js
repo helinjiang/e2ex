@@ -1,7 +1,12 @@
 'use strict';
 
 exports.__esModule = true;
-exports.clientScript = exports.basicHandle = exports.pageScanDev = exports.dataListNotice = exports.dataComic = undefined;
+exports.basicHandle = exports.pageScanDev = exports.dataListNotice = exports.dataComic = undefined;
+exports.getScript = getScript;
+
+var _path = require('path');
+
+var _path2 = _interopRequireDefault(_path);
 
 var _comic = require('./data-master/comic');
 
@@ -19,16 +24,16 @@ var _basicHandle2 = require('./nightmare-master/basic-handle');
 
 var _basicHandle3 = _interopRequireDefault(_basicHandle2);
 
-var _clientScript2 = require('./client-script');
-
-var _clientScript3 = _interopRequireDefault(_clientScript2);
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 exports.dataComic = _dataComic;
 exports.dataListNotice = _dataListNotice;
 exports.pageScanDev = _pageScanDev3.default;
 exports.basicHandle = _basicHandle3.default;
-exports.clientScript = _clientScript3.default;
+function getScript() {
+    var webpackConfig = require('./webpack-config');
+
+    return _path2.default.join(webpackConfig.output.path, webpackConfig.output.filename.replace(/\[name\]/, name));
+}
