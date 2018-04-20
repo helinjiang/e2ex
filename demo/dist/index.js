@@ -32,7 +32,7 @@ exports.dataComic = _dataComic;
 exports.dataListNotice = _dataListNotice;
 exports.pageScanDev = _pageScanDev3.default;
 exports.basicHandle = _basicHandle3.default;
-function getScript() {
+function getScript(name) {
     var webpackConfig = require('./webpack-config');
 
     return _path2.default.join(webpackConfig.output.path, webpackConfig.output.filename.replace(/\[name\]/, name));
