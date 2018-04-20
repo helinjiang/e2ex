@@ -1,7 +1,3 @@
-// == inline begin ==
-// eval(require('raw-loader!../../modules/nightmare-preload.js'));
-// == inline end ==
-
 // overwrite the default confirm
 window.confirm = function (message, defaultResponse) {
     console.log('【window.confirm】', message, defaultResponse);

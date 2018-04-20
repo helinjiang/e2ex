@@ -1,7 +1,3 @@
-// == inline begin ==
-// eval(require('raw-loader!../../modules/nightmare-preload.js'));
-// == inline end ==
-
 const utils = require('../../modules/utils');
 
 /**

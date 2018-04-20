@@ -1,11 +1,4 @@
-// == inline begin ==
-// eval(require('raw-loader!../../modules/nightmare-preload.js'));
-// == inline end ==
-
-// const utils = require('../../modules/utils');
-import utils from '../../modules/utils';
-
-console.log('xxxxxxxxxxx', typeof utils);
+const utils = require('../../modules/utils');
 
 /**
  * 必须要通过挂载在 window 对象上，才能够被传递到 electronic 中

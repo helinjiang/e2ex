@@ -1,10 +1,4 @@
-// require('jquery');
-// const myJQUERY = require('jquery/dist/jquery.min.js');
 const urlHandle = require('url-handle');
-
-console.log('-=-=-=-=-=', typeof jQuery, typeof $, typeof window.jQuery, typeof window.$);
-// console.log('===',typeof myJQUERY, typeof jQuery)
-// window.myJQUERY2 = myJQUERY;
 
 /**
  * 获得背景图地址
