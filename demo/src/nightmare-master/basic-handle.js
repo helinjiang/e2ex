@@ -2,7 +2,7 @@
  * 通用的流程
  */
 
-import Nightmare from 'nightmare-handler';
+import {NightmarePlus} from 'nightmare-handler';
 
 /**
  *
@@ -50,7 +50,7 @@ export default function getResult(pageUrl, preloadClientScriptPath, matmanQuery,
     // console.log('===nightmareConfig====', nightmareConfig);
 
     // 创建 nightmare 对象
-    let nightmare = Nightmare(nightmareConfig);
+    let nightmare = NightmarePlus(nightmareConfig);
 
     let globalInfo = {};
 

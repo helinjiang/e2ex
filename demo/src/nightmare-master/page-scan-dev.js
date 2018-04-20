@@ -1,4 +1,4 @@
-import Nightmare from 'nightmare-handler';
+import {NightmarePlus} from 'nightmare-handler';
 
 /**
  *
@@ -45,7 +45,7 @@ export default function getResult(pageUrl, preloadClientScriptPath, matmanQuery,
     // console.log('===nightmareConfig====', nightmareConfig);
 
     // 创建 nightmare 对象
-    let nightmare = Nightmare(nightmareConfig);
+    let nightmare = NightmarePlus(nightmareConfig);
 
     let result = nightmare
         .device('mobile')
@@ -60,12 +60,32 @@ export default function getResult(pageUrl, preloadClientScriptPath, matmanQuery,
     }
 
     // 打开网页获取信息
-    return result
-        .evaluate(function () {
-            // window.getPageInfo 方法由 preload 配置中的 js 文件引入
-            return window.getPageInfo();
-        })
-        .end();
+    return result.evaluate(function () {
+        // window.getPageInfo 方法和其他变量均由 preload 配置中的 js 文件引入
+
+        // 如果没有这个变量，说明注入代码失败
+        if (!window.e2ex) {
+            return {
+                error: 'preload failed!'
+            };
+        }
+
+        // window.getPageInfo 必须是个函数
+        if (typeof window.getPageInfo !== 'function') {
+            return {
+                error: 'window.getPageInfo is not function!'
+            };
+        }
+
+        // 如果存在需要前端执行的代码，则在所有逻辑开始之前执行
+        if (window.evalList && window.evalList.length) {
+            window.evalList.forEach((item) => {
+                eval(window[item]);
+            });
+        }
+
+        return window.getPageInfo();
+    }).end();
 }
 
 
