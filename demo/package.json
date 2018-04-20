@@ -11,6 +11,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "matman-tool-e2e": "^0.1.1",
+    "nightmare-handler": "^0.2.1",
     "url-handle": "^0.1.3"
   }
 }
