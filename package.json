@@ -1,6 +1,6 @@
 {
   "name": "e2ex",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "E2E tester using nightmare",
   "main": "lib/index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "bin": {
-    "matman": "./bin/matman"
+    "e2ex": "./bin/e2ex"
   },
   "bugs": {
     "url": "https://github.com/helinjiang/e2ex/issues"
@@ -60,7 +60,6 @@
     "inquirer": "^3.0.6",
     "jquery": "^3.3.1",
     "js-yaml": "^3.11.0",
-    "matman-core": "^0.1.5",
     "meow": "^3.7.0",
     "minimist": "^1.2.0",
     "ora": "^1.4.0",
